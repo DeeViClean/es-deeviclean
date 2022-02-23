@@ -55,7 +55,6 @@ fetch(url).then(function (response) {
   return response.json();
 }).then(function (data) {
   var resultado = document.querySelector('#resultado');
-  resultado.innerHTML = '4.5 ';
   var res_a_dividir = 0;
 
   for (var index = 0; index < data.length; index++) {
@@ -69,10 +68,12 @@ fetch(url).then(function (response) {
           break;
 
         case "5":
+          res_a_dividir += 5;
           input_select = "<input id=\"radio1\" type=\"radio\" name=\"estrellas\" value=\"5\" checked>\n\n                                    <label for=\"radio1\">\u2605</label>\n                                    <input id=\"radio2\" type=\"radio\" name=\"estrellas\" value=\"4\" disabled>\n                                    <label for=\"radio2\">\u2605</label>\n                                    <input id=\"radio3\" type=\"radio\" name=\"estrellas\" value=\"3\" disabled>\n                                    <label for=\"radio3\">\u2605</label>\n                                    <input id=\"radio4\" type=\"radio\" name=\"estrellas\" value=\"2\" disabled>\n                                    <label for=\"radio4\">\u2605</label>\n                                    <input id=\"radio5\" type=\"radio\" name=\"estrellas\" value=\"1\" disabled>\n                                    <label for=\"radio5\">\u2605</label>";
           break;
 
         default:
+          res_a_dividir += 5;
           input_select = "<input id=\"radio1\" type=\"radio\" name=\"estrellas\" value=\"5\" checked>\n\n                                    <label for=\"radio1\">\u2605</label>\n                                    <input id=\"radio2\" type=\"radio\" name=\"estrellas\" value=\"4\" disabled>\n                                    <label for=\"radio2\">\u2605</label>\n                                    <input id=\"radio3\" type=\"radio\" name=\"estrellas\" value=\"3\" disabled>\n                                    <label for=\"radio3\">\u2605</label>\n                                    <input id=\"radio4\" type=\"radio\" name=\"estrellas\" value=\"2\" disabled>\n                                    <label for=\"radio4\">\u2605</label>\n                                    <input id=\"radio5\" type=\"radio\" name=\"estrellas\" value=\"1\" disabled>\n                                    <label for=\"radio5\">\u2605</label>";
           break;
       }
@@ -81,13 +82,15 @@ fetch(url).then(function (response) {
     }
   }
 
+  res_a_dividir += 9 + 9;
   swipper_cont.innerHTML += "\n        <div class=\"swiper-slide\">\n                        <div class=\"texty\">\n                            Estoy encantada con la limpiezas express. No puedo decir nada malo, me han parecido super profesionales. me han dejado\n                            estupendamente todo y de verdad recomiendo a todos que les llam\xE9is.\n                        </div>\n                        <div class=\"Author\">\n                            Antonella Castro\n                        </div>\n                        <div id=\"form\">\n                            <form action=\"\">\n                                <p class=\"clasificacion\" style=\"font-size: 20px;\">\n                                    <input id=\"radio1\" type=\"radio\" name=\"estrellas\" value=\"5\" checked>\n                                    <label for=\"radio1\">\u2605</label>\n                                    <input id=\"radio2\" type=\"radio\" name=\"estrellas\" value=\"4\" disabled>\n                                    <label for=\"radio2\">\u2605</label>\n                                    <input id=\"radio3\" type=\"radio\" name=\"estrellas\" value=\"3\" disabled>\n                                    <label for=\"radio3\">\u2605</label>\n                                    <input id=\"radio4\" type=\"radio\" name=\"estrellas\" value=\"2\" disabled>\n                                    <label for=\"radio4\">\u2605</label>\n                                    <input id=\"radio5\" type=\"radio\" name=\"estrellas\" value=\"1\" disabled>\n                                    <label for=\"radio5\">\u2605</label>\n                                </p>\n                            </form>\n                        </div>\n                    </div>";
   swipper_cont.innerHTML += "\n        <div class=\"swiper-slide\">\n                        <div class=\"texty\">\n                            Somos asiduos desde hace tiempo y siempre aciertan.\n                            He usado varias veces sus servicios y nos ha encantado la calidad de la limpieza.\n                        </div>\n                        <div class=\"Author\">\n                            Maria Rivadeneira\n                        </div>\n                        <div id=\"form\">\n                            <form action=\"\">\n                                <p class=\"clasificacion\" style=\"font-size: 20px;\">\n                                    <input id=\"radio1\" type=\"radio\" name=\"estrellas\" value=\"5\" disabledc>\n                                    <label for=\"radio1\">\u2605</label>\n                                    <input id=\"radio2\" type=\"radio\" name=\"estrellas\" value=\"4\" checked>\n                                    <label for=\"radio2\">\u2605</label>\n                                    <input id=\"radio3\" type=\"radio\" name=\"estrellas\" value=\"3\" disabled>\n                                    <label for=\"radio3\">\u2605</label>\n                                    <input id=\"radio4\" type=\"radio\" name=\"estrellas\" value=\"2\" disabled>\n                                    <label for=\"radio4\">\u2605</label>\n                                    <input id=\"radio5\" type=\"radio\" name=\"estrellas\" value=\"1\" disabled>\n                                    <label for=\"radio5\">\u2605</label>\n                                </p>\n                            </form>\n                        </div>\n                    </div>";
   swipper_cont.innerHTML += "\n        <div class=\"swiper-slide\">\n                        <div class=\"texty\">\n                            Todos son muy profesionales y respetuosos, el servicio que brindan me ha gustado.\n                        </div>\n                        <div class=\"Author\">\n                            Mario Bustamante\n                        </div>\n                        <div id=\"form\">\n                            <form action=\"\">\n                                <p class=\"clasificacion\" style=\"font-size: 20px;\">\n                                    <input id=\"radio1\" type=\"radio\" name=\"estrellas\" value=\"5\" disabledc>\n                                    <label for=\"radio1\">\u2605</label>\n                                    <input id=\"radio2\" type=\"radio\" name=\"estrellas\" value=\"4\" checked>\n                                    <label for=\"radio2\">\u2605</label>\n                                    <input id=\"radio3\" type=\"radio\" name=\"estrellas\" value=\"3\" disabled>\n                                    <label for=\"radio3\">\u2605</label>\n                                    <input id=\"radio4\" type=\"radio\" name=\"estrellas\" value=\"2\" disabled>\n                                    <label for=\"radio4\">\u2605</label>\n                                    <input id=\"radio5\" type=\"radio\" name=\"estrellas\" value=\"1\" disabled>\n                                    <label for=\"radio5\">\u2605</label>\n                                </p>\n                            </form>\n                        </div>\n                    </div>";
+  swipper_cont.innerHTML += "\n        <div class=\"swiper-slide\">\n                        <div class=\"texty\">\n                            Estoy encantada con la limpiezas express. No puedo decir nada malo, me han parecido super profesionales. me han dejado\n                            estupendamente todo y de verdad recomiendo a todos que les llam\xE9is.\n                        </div>\n                        <div class=\"Author\">\n                            Antonella Castro\n                        </div>\n                        <div id=\"form\">\n                            <form action=\"\">\n                                <p class=\"clasificacion\" style=\"font-size: 20px;\">\n                                    <input id=\"radio1\" type=\"radio\" name=\"estrellas\" value=\"5\" checked>\n                                    <label for=\"radio1\">\u2605</label>\n                                    <input id=\"radio2\" type=\"radio\" name=\"estrellas\" value=\"4\" disabled>\n                                    <label for=\"radio2\">\u2605</label>\n                                    <input id=\"radio3\" type=\"radio\" name=\"estrellas\" value=\"3\" disabled>\n                                    <label for=\"radio3\">\u2605</label>\n                                    <input id=\"radio4\" type=\"radio\" name=\"estrellas\" value=\"2\" disabled>\n                                    <label for=\"radio4\">\u2605</label>\n                                    <input id=\"radio5\" type=\"radio\" name=\"estrellas\" value=\"1\" disabled>\n                                    <label for=\"radio5\">\u2605</label>\n                                </p>\n                            </form>\n                        </div>\n                    </div>";
   swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    slidesPerGroup: 2,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    slidesPerGroup: 1,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -98,8 +101,20 @@ fetch(url).then(function (response) {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      900: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 50
+      }
     }
   });
+  resultado.innerHTML = "".concat(res_a_dividir / 4);
+  setTimeout(function () {
+    console.log(res_a_dividir / 4);
+  }, 500);
 });
 var mediaqueryList = window.matchMedia("(max-width: 500px)"); //swiper
 

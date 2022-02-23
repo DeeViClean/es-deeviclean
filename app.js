@@ -60,7 +60,7 @@ fetch(url)
     })
     .then(function (data) {
         let resultado = document.querySelector('#resultado');
-        resultado.innerHTML = '4.5 '
+
         let res_a_dividir = 0
         for (let index = 0; index < data.length; index++) {
             let input_select = "";
@@ -80,6 +80,7 @@ fetch(url)
                                     <label for="radio5">★</label>`
                         break;
                     case "5":
+                        res_a_dividir += 5;
                         input_select = `<input id="radio1" type="radio" name="estrellas" value="5" checked>
 
                                     <label for="radio1">★</label>
@@ -95,6 +96,8 @@ fetch(url)
 
 
                     default:
+                        res_a_dividir += 5;
+
                         input_select = `<input id="radio1" type="radio" name="estrellas" value="5" checked>
 
                                     <label for="radio1">★</label>
@@ -128,6 +131,7 @@ fetch(url)
             }
 
         }
+        res_a_dividir += 9 + 9;
         swipper_cont.innerHTML += `
         <div class="swiper-slide">
                         <div class="texty">
@@ -205,10 +209,36 @@ fetch(url)
                             </form>
                         </div>
                     </div>`;
+        swipper_cont.innerHTML += `
+        <div class="swiper-slide">
+                        <div class="texty">
+                            Estoy encantada con la limpiezas express. No puedo decir nada malo, me han parecido super profesionales. me han dejado
+                            estupendamente todo y de verdad recomiendo a todos que les llaméis.
+                        </div>
+                        <div class="Author">
+                            Antonella Castro
+                        </div>
+                        <div id="form">
+                            <form action="">
+                                <p class="clasificacion" style="font-size: 20px;">
+                                    <input id="radio1" type="radio" name="estrellas" value="5" checked>
+                                    <label for="radio1">★</label>
+                                    <input id="radio2" type="radio" name="estrellas" value="4" disabled>
+                                    <label for="radio2">★</label>
+                                    <input id="radio3" type="radio" name="estrellas" value="3" disabled>
+                                    <label for="radio3">★</label>
+                                    <input id="radio4" type="radio" name="estrellas" value="2" disabled>
+                                    <label for="radio4">★</label>
+                                    <input id="radio5" type="radio" name="estrellas" value="1" disabled>
+                                    <label for="radio5">★</label>
+                                </p>
+                            </form>
+                        </div>
+                    </div>`;
         swiper = new Swiper(".mySwiper", {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            slidesPerGroup: 2,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            slidesPerGroup: 1,
             loop: true,
             loopFillGroupWithBlank: true,
             pagination: {
@@ -220,8 +250,20 @@ fetch(url)
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-        }
-        );
+            breakpoints: {
+                // when window width is >= 320px
+                900: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 50
+                }
+            }
+        });
+
+        resultado.innerHTML = `${res_a_dividir / 4}`
+        setTimeout(() => {
+            console.log(res_a_dividir / 4);
+        }, 500);
     });
 
 var mediaqueryList = window.matchMedia("(max-width: 500px)");
@@ -242,6 +284,7 @@ if (mediaqueryList.matches) {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+
     });
 }
 // dropdown

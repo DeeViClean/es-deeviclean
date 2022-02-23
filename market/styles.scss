@@ -869,6 +869,7 @@ nav {
 
 			.active:before {
 				display: block;
+				z-index: 5;
 			}
 
 			.active .drop-down__item-icon {
@@ -1288,6 +1289,7 @@ a {
 			top: 0;
 			margin-top: 170px;
 			margin-bottom: 100px;
+			margin: 0;
 
 			br {
 				display: none;
@@ -1317,6 +1319,8 @@ a {
 			}
 
 			&.swiper-slide-active {
+				z-index: 5 !important;
+
 				.product-slider__card {
 					//opacity: 1;
 					//width: 100%;
@@ -1328,6 +1332,7 @@ a {
 					>* {
 						opacity: 1;
 						transform: none;
+
 
 						@for $i from 0 to 15 {
 							&:nth-child(#{$i + 1}) {
@@ -1513,9 +1518,6 @@ a {
 		}
 
 		&__bottom {
-			margin-top: 20px;
-			opacity: 0;
-			transform: translateY(55px);
 			transition: all 0.5s;
 		}
 	}
@@ -1704,6 +1706,7 @@ a {
 				opacity: 1;
 				transform: translateY(-50%) translateX(0);
 				transition-delay: 0.3s;
+				z-index: 5;
 			}
 
 			img {

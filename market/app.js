@@ -105,6 +105,7 @@ swiper.on('slideChange', function () {
     console.log(target);
 
     $('.product-img__item').removeClass('active');
+
     $('.product-img__item#' + target).addClass('active');
 
     if (swiper.isEnd) {
@@ -116,9 +117,11 @@ swiper.on('slideChange', function () {
 
     if (swiper.isBeginning) {
         $('.prev').addClass('disabled');
+        console.log(swiper);
     } else {
         $('.prev').removeClass('disabled');
     }
+
 });
 
 let salidoooo = document.querySelector('.salidoooo');
@@ -127,7 +130,7 @@ function toggle_salidoooo() {
 }
 
 $(".js-fav").on("click", function () {
-    $(this).find('.heart').toggleClass("is-active");
+    $(this).find('.salidoooo').toggleClass("is-active");
 });
 var pauseButton = document.querySelector('.pause'); var vid = document.getElementById("bgvid");
 
