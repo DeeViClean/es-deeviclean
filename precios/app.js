@@ -107,7 +107,7 @@ fetch(url)
 
                         </div>
                         <div class="precios_hora">
-                            <h4>precios por hora</h4>
+                            <h4>precio dia</h4>
                             <div class="precios">
                                 <div>
                                     <p>semanalmente</p>
