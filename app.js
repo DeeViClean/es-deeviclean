@@ -136,7 +136,7 @@ fetch(url)
         <div class="swiper-slide">
                         <div class="texty">
                             Estoy encantada con la limpiezas express. No puedo decir nada malo, me han parecido super profesionales. me han dejado
-                            estupendamente todo y de verdad recomiendo a todos que les llaméis.
+                            estupendamente todo y de verdad recomiendo a todos.
                         </div>
                         <div class="Author">
                             Antonella Castro
@@ -212,11 +212,10 @@ fetch(url)
         swipper_cont.innerHTML += `
         <div class="swiper-slide">
                         <div class="texty">
-                            Estoy encantada con la limpiezas express. No puedo decir nada malo, me han parecido super profesionales. me han dejado
-                            estupendamente todo y de verdad recomiendo a todos que les llaméis.
+                            Me gusto el servicio y la puntualidad que ofrece DeeViClean.
                         </div>
                         <div class="Author">
-                            Antonella Castro
+                            Federico Alarcon
                         </div>
                         <div id="form">
                             <form action="">
